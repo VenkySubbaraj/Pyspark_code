@@ -1,0 +1,42 @@
+id,type,name,batter_id,batter_type,topping_id,topping_type
+0001,donut,Cake,1001,Regular,5001,None
+0001,donut,Cake,1001,Regular,5002,Glazed
+0001,donut,Cake,1001,Regular,5005,Sugar
+0001,donut,Cake,1001,Regular,5007,Powdered Sugar
+0001,donut,Cake,1001,Regular,5006,Chocolate with Sprinkles
+0001,donut,Cake,1001,Regular,5003,Chocolate
+0001,donut,Cake,1001,Regular,5004,Maple
+0001,donut,Cake,1002,Chocolate,5001,None
+0001,donut,Cake,1002,Chocolate,5002,Glazed
+0001,donut,Cake,1002,Chocolate,5005,Sugar
+0001,donut,Cake,1002,Chocolate,5007,Powdered Sugar
+0001,donut,Cake,1002,Chocolate,5006,Chocolate with Sprinkles
+0001,donut,Cake,1002,Chocolate,5003,Chocolate
+0001,donut,Cake,1002,Chocolate,5004,Maple
+0001,donut,Cake,1003,Blueberry,5001,None
+0001,donut,Cake,1003,Blueberry,5002,Glazed
+0001,donut,Cake,1003,Blueberry,5005,Sugar
+0001,donut,Cake,1003,Blueberry,5007,Powdered Sugar
+0001,donut,Cake,1003,Blueberry,5006,Chocolate with Sprinkles
+0001,donut,Cake,1003,Blueberry,5003,Chocolate
+0001,donut,Cake,1003,Blueberry,5004,Maple
+0001,donut,Cake,1004,Devil's Food,5001,None
+0001,donut,Cake,1004,Devil's Food,5002,Glazed
+0001,donut,Cake,1004,Devil's Food,5005,Sugar
+0001,donut,Cake,1004,Devil's Food,5007,Powdered Sugar
+0001,donut,Cake,1004,Devil's Food,5006,Chocolate with Sprinkles
+0001,donut,Cake,1004,Devil's Food,5003,Chocolate
+0001,donut,Cake,1004,Devil's Food,5004,Maple
+0002,donut,Raised,1001,Regular,5001,None
+0002,donut,Raised,1001,Regular,5002,Glazed
+0002,donut,Raised,1001,Regular,5005,Sugar
+0002,donut,Raised,1001,Regular,5003,Chocolate
+0002,donut,Raised,1001,Regular,5004,Maple
+0003,donut,Old Fashioned,1001,Regular,5001,None
+0003,donut,Old Fashioned,1001,Regular,5002,Glazed
+0003,donut,Old Fashioned,1001,Regular,5003,Chocolate
+0003,donut,Old Fashioned,1001,Regular,5004,Maple
+0003,donut,Old Fashioned,1002,Chocolate,5001,None
+0003,donut,Old Fashioned,1002,Chocolate,5002,Glazed
+0003,donut,Old Fashioned,1002,Chocolate,5003,Chocolate
+0003,donut,Old Fashioned,1002,Chocolate,5004,Maple
