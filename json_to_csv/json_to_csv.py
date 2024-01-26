@@ -1,46 +1,40 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, explode_outer
+from pyspark.sql import functions as F
+from pyspark.sql.types import StructType, StructField, StringType, ArrayType
+from pyspark.sql.functions import col, explode_outer, expr
+import json
+import csv
+from pyspark.sql.functions import col
+from pyspark.sql import SparkSession
 
-spark = SparkSession.builder.appName("rationalize_struct").getOrCreate()
+def flatten(df):
+    complex_fields = dict([(field.name, field.dataType) for field in df.schema.fields
+                           if type(field.dataType) == ArrayType or type(field.dataType) == StructType])
+    
+    while len(complex_fields) != 0:
+        col_name = list(complex_fields.keys())[0]
+        print("processing")
 
+        if type(complex_fields[col_name]) == StructType:
+            expanded = [col(col_name + '.' + k).alias(col_name + '_' + k) for k in [n.name for n in complex_fields[col_name]]]
+            df = df.select("*", *expanded).drop(col_name)
+        
+        elif type(complex_fields[col_name]) == ArrayType:
+            df = df.withColumn(col_name, explode_outer(col_name))
+
+        complex_fields = dict([(field.name, field.dataType) for field in df.schema.fields
+                               if type(field.dataType) == ArrayType or type(field.dataType) == StructType])
+
+    return df
+
+
+spark = SparkSession.builder.appName("example").getOrCreate()
 f = open('./Sample_data.json')
 data = json.load(f)
-print(data)
 json_data = data
-df = spark.read.json(spark.sparkContext.parallelize(json_data, 1))
-df_batters = df.select(
-    col("id"),
-    col("type"),
-    col("name"),
-    explode_outer("batters.batter").alias("batter")
-)
 
-df_toppings = df.select(
-    col("id"),
-    col("type"),
-    col("name"),
-    explode_outer("topping").alias("topping")
-)
-df_rationalized = df_batters.select(
-    col("id"),
-    col("type"),
-    col("name"),
-    col("batter.id").alias("batter_id"),
-    col("batter.type").alias("batter_type")
-).join(
-    df_toppings.select(
-        col("id"),
-        col("type"),
-        col("name"),
-        col("topping.id").alias("topping_id"),
-        col("topping.type").alias("topping_type")
-    ),
-    ["id","type","name"],"outer"
-)
-
-df_rationalized.show(truncate=False)
-csv_path = "./sample.csv"
-df_rationalized.write.csv(csv_path, header=True, mode="overwrite")
-csv_path = "./sample.parquet"
-df_rationalized.write.parquet(csv_path, mode="overwrite")
-spark.stop()
+df = spark.read.json(spark.sparkContext.parallelize([json_data]))
+flattened_df = flatten(df)
+columns = flattened_df.columns
+output_directory = "output_columns"
+flattened_df.write.csv('output.csv', header=True, mode='overwrite')

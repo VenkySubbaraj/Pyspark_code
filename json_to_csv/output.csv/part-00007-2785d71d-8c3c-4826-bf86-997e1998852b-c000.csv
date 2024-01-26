@@ -1,0 +1,42 @@
+id,name,type,topping_id,topping_type,batters_batter_id,batters_batter_type
+0001,Cake,donut,5001,None,1001,Regular
+0001,Cake,donut,5001,None,1002,Chocolate
+0001,Cake,donut,5001,None,1003,Blueberry
+0001,Cake,donut,5001,None,1004,Devil's Food
+0001,Cake,donut,5002,Glazed,1001,Regular
+0001,Cake,donut,5002,Glazed,1002,Chocolate
+0001,Cake,donut,5002,Glazed,1003,Blueberry
+0001,Cake,donut,5002,Glazed,1004,Devil's Food
+0001,Cake,donut,5005,Sugar,1001,Regular
+0001,Cake,donut,5005,Sugar,1002,Chocolate
+0001,Cake,donut,5005,Sugar,1003,Blueberry
+0001,Cake,donut,5005,Sugar,1004,Devil's Food
+0001,Cake,donut,5007,Powdered Sugar,1001,Regular
+0001,Cake,donut,5007,Powdered Sugar,1002,Chocolate
+0001,Cake,donut,5007,Powdered Sugar,1003,Blueberry
+0001,Cake,donut,5007,Powdered Sugar,1004,Devil's Food
+0001,Cake,donut,5006,Chocolate with Sprinkles,1001,Regular
+0001,Cake,donut,5006,Chocolate with Sprinkles,1002,Chocolate
+0001,Cake,donut,5006,Chocolate with Sprinkles,1003,Blueberry
+0001,Cake,donut,5006,Chocolate with Sprinkles,1004,Devil's Food
+0001,Cake,donut,5003,Chocolate,1001,Regular
+0001,Cake,donut,5003,Chocolate,1002,Chocolate
+0001,Cake,donut,5003,Chocolate,1003,Blueberry
+0001,Cake,donut,5003,Chocolate,1004,Devil's Food
+0001,Cake,donut,5004,Maple,1001,Regular
+0001,Cake,donut,5004,Maple,1002,Chocolate
+0001,Cake,donut,5004,Maple,1003,Blueberry
+0001,Cake,donut,5004,Maple,1004,Devil's Food
+0002,Raised,donut,5001,None,1001,Regular
+0002,Raised,donut,5002,Glazed,1001,Regular
+0002,Raised,donut,5005,Sugar,1001,Regular
+0002,Raised,donut,5003,Chocolate,1001,Regular
+0002,Raised,donut,5004,Maple,1001,Regular
+0003,Old Fashioned,donut,5001,None,1001,Regular
+0003,Old Fashioned,donut,5001,None,1002,Chocolate
+0003,Old Fashioned,donut,5002,Glazed,1001,Regular
+0003,Old Fashioned,donut,5002,Glazed,1002,Chocolate
+0003,Old Fashioned,donut,5003,Chocolate,1001,Regular
+0003,Old Fashioned,donut,5003,Chocolate,1002,Chocolate
+0003,Old Fashioned,donut,5004,Maple,1001,Regular
+0003,Old Fashioned,donut,5004,Maple,1002,Chocolate
